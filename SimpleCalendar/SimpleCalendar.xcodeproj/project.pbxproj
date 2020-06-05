@@ -24,6 +24,7 @@
 		9E34A28C248A46E900AC30B5 /* SCCalendar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E34A28B248A46E900AC30B5 /* SCCalendar.swift */; };
 		9E34A28E248A475C00AC30B5 /* PresentedMonthLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E34A28D248A475C00AC30B5 /* PresentedMonthLabel.swift */; };
 		9E34A290248A47C200AC30B5 /* ButtonsSegmentedControl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E34A28F248A47C200AC30B5 /* ButtonsSegmentedControl.swift */; };
+		9E34A293248A4D7300AC30B5 /* DatesController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E34A292248A4D7300AC30B5 /* DatesController.swift */; };
 		9E95AA5B248971DB00F64DE1 /* SCDate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E95AA5A248971DB00F64DE1 /* SCDate.swift */; };
 		9E95AA5D248971FF00F64DE1 /* SCDateType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E95AA5C248971FF00F64DE1 /* SCDateType.swift */; };
 		9EF09ADC24893CF7000ED4D8 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9EF09ADB24893CF7000ED4D8 /* AppDelegate.swift */; };
@@ -76,6 +77,7 @@
 		9E34A28B248A46E900AC30B5 /* SCCalendar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SCCalendar.swift; sourceTree = "<group>"; };
 		9E34A28D248A475C00AC30B5 /* PresentedMonthLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PresentedMonthLabel.swift; sourceTree = "<group>"; };
 		9E34A28F248A47C200AC30B5 /* ButtonsSegmentedControl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ButtonsSegmentedControl.swift; sourceTree = "<group>"; };
+		9E34A292248A4D7300AC30B5 /* DatesController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DatesController.swift; sourceTree = "<group>"; };
 		9E95AA5A248971DB00F64DE1 /* SCDate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SCDate.swift; sourceTree = "<group>"; };
 		9E95AA5C248971FF00F64DE1 /* SCDateType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SCDateType.swift; sourceTree = "<group>"; };
 		9EF09AD824893CF7000ED4D8 /* SimpleCalendar.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SimpleCalendar.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -130,6 +132,7 @@
 			isa = PBXGroup;
 			children = (
 				9E2B9B1E2489514000A9F986 /* TodayViewController.swift */,
+				9E34A291248A4D5000AC30B5 /* ModelController */,
 				9E34A281248A446000AC30B5 /* Views */,
 				9E95AA59248971A100F64DE1 /* Model */,
 				9E34A286248A45CB00AC30B5 /* Extension & Helpers */,
@@ -160,6 +163,14 @@
 				9E34A28B248A46E900AC30B5 /* SCCalendar.swift */,
 			);
 			path = "Extension & Helpers";
+			sourceTree = "<group>";
+		};
+		9E34A291248A4D5000AC30B5 /* ModelController */ = {
+			isa = PBXGroup;
+			children = (
+				9E34A292248A4D7300AC30B5 /* DatesController.swift */,
+			);
+			path = ModelController;
 			sourceTree = "<group>";
 		};
 		9E95AA59248971A100F64DE1 /* Model */ = {
@@ -326,6 +337,7 @@
 				9E34A288248A463100AC30B5 /* CustomFont.swift in Sources */,
 				9E95AA5D248971FF00F64DE1 /* SCDateType.swift in Sources */,
 				9E34A290248A47C200AC30B5 /* ButtonsSegmentedControl.swift in Sources */,
+				9E34A293248A4D7300AC30B5 /* DatesController.swift in Sources */,
 				9E95AA5B248971DB00F64DE1 /* SCDate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
