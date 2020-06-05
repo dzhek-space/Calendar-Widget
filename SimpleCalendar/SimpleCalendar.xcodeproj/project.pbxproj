@@ -17,6 +17,13 @@
 		9E2B9B262489514100A9F986 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 9E2B9B242489514100A9F986 /* InfoPlist.strings */; };
 		9E2B9B2A2489514100A9F986 /* Widget.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 9E2B9B192489514000A9F986 /* Widget.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		9E2B9B302489517A00A9F986 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9EF09ADF24893CFB000ED4D8 /* Assets.xcassets */; };
+		9E34A283248A447A00AC30B5 /* CircleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E34A282248A447A00AC30B5 /* CircleView.swift */; };
+		9E34A285248A458600AC30B5 /* CellView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E34A284248A458600AC30B5 /* CellView.swift */; };
+		9E34A288248A463100AC30B5 /* CustomFont.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E34A287248A463100AC30B5 /* CustomFont.swift */; };
+		9E34A28A248A469C00AC30B5 /* CalendarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E34A289248A469C00AC30B5 /* CalendarView.swift */; };
+		9E34A28C248A46E900AC30B5 /* SCCalendar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E34A28B248A46E900AC30B5 /* SCCalendar.swift */; };
+		9E34A28E248A475C00AC30B5 /* PresentedMonthLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E34A28D248A475C00AC30B5 /* PresentedMonthLabel.swift */; };
+		9E34A290248A47C200AC30B5 /* ButtonsSegmentedControl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E34A28F248A47C200AC30B5 /* ButtonsSegmentedControl.swift */; };
 		9E95AA5B248971DB00F64DE1 /* SCDate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E95AA5A248971DB00F64DE1 /* SCDate.swift */; };
 		9E95AA5D248971FF00F64DE1 /* SCDateType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E95AA5C248971FF00F64DE1 /* SCDateType.swift */; };
 		9EF09ADC24893CF7000ED4D8 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9EF09ADB24893CF7000ED4D8 /* AppDelegate.swift */; };
@@ -62,6 +69,13 @@
 		9E2B9B232489514100A9F986 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		9E2B9B252489514100A9F986 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		9E2B9B272489514100A9F986 /* Widget.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Widget.entitlements; sourceTree = "<group>"; };
+		9E34A282248A447A00AC30B5 /* CircleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CircleView.swift; sourceTree = "<group>"; };
+		9E34A284248A458600AC30B5 /* CellView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CellView.swift; sourceTree = "<group>"; };
+		9E34A287248A463100AC30B5 /* CustomFont.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomFont.swift; sourceTree = "<group>"; };
+		9E34A289248A469C00AC30B5 /* CalendarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalendarView.swift; sourceTree = "<group>"; };
+		9E34A28B248A46E900AC30B5 /* SCCalendar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SCCalendar.swift; sourceTree = "<group>"; };
+		9E34A28D248A475C00AC30B5 /* PresentedMonthLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PresentedMonthLabel.swift; sourceTree = "<group>"; };
+		9E34A28F248A47C200AC30B5 /* ButtonsSegmentedControl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ButtonsSegmentedControl.swift; sourceTree = "<group>"; };
 		9E95AA5A248971DB00F64DE1 /* SCDate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SCDate.swift; sourceTree = "<group>"; };
 		9E95AA5C248971FF00F64DE1 /* SCDateType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SCDateType.swift; sourceTree = "<group>"; };
 		9EF09AD824893CF7000ED4D8 /* SimpleCalendar.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SimpleCalendar.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -116,13 +130,36 @@
 			isa = PBXGroup;
 			children = (
 				9E2B9B1E2489514000A9F986 /* TodayViewController.swift */,
+				9E34A281248A446000AC30B5 /* Views */,
 				9E95AA59248971A100F64DE1 /* Model */,
+				9E34A286248A45CB00AC30B5 /* Extension & Helpers */,
 				9E2B9B202489514000A9F986 /* TodayViewController.xib */,
 				9E2B9B232489514100A9F986 /* Info.plist */,
 				9E2B9B242489514100A9F986 /* InfoPlist.strings */,
 				9E2B9B272489514100A9F986 /* Widget.entitlements */,
 			);
 			path = Widget;
+			sourceTree = "<group>";
+		};
+		9E34A281248A446000AC30B5 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				9E34A28F248A47C200AC30B5 /* ButtonsSegmentedControl.swift */,
+				9E34A28D248A475C00AC30B5 /* PresentedMonthLabel.swift */,
+				9E34A289248A469C00AC30B5 /* CalendarView.swift */,
+				9E34A284248A458600AC30B5 /* CellView.swift */,
+				9E34A282248A447A00AC30B5 /* CircleView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		9E34A286248A45CB00AC30B5 /* Extension & Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				9E34A287248A463100AC30B5 /* CustomFont.swift */,
+				9E34A28B248A46E900AC30B5 /* SCCalendar.swift */,
+			);
+			path = "Extension & Helpers";
 			sourceTree = "<group>";
 		};
 		9E95AA59248971A100F64DE1 /* Model */ = {
@@ -280,8 +317,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9E34A283248A447A00AC30B5 /* CircleView.swift in Sources */,
+				9E34A28A248A469C00AC30B5 /* CalendarView.swift in Sources */,
+				9E34A285248A458600AC30B5 /* CellView.swift in Sources */,
+				9E34A28C248A46E900AC30B5 /* SCCalendar.swift in Sources */,
 				9E2B9B1F2489514000A9F986 /* TodayViewController.swift in Sources */,
+				9E34A28E248A475C00AC30B5 /* PresentedMonthLabel.swift in Sources */,
+				9E34A288248A463100AC30B5 /* CustomFont.swift in Sources */,
 				9E95AA5D248971FF00F64DE1 /* SCDateType.swift in Sources */,
+				9E34A290248A47C200AC30B5 /* ButtonsSegmentedControl.swift in Sources */,
 				9E95AA5B248971DB00F64DE1 /* SCDate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
