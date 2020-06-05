@@ -12,6 +12,8 @@ final class PresentedMonthLabel: NSTextView {
 
     private let size = CGSize(width: 144, height: 21)
     
+    // MARK: -
+    
     convenience init(origin: CGPoint, value: String) {
         self.init(frame: NSRect.zero)
         self.frame = NSRect(origin: origin, size: size)

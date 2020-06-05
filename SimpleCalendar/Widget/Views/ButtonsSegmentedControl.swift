@@ -13,6 +13,8 @@ final class ButtonsSegmentedControl: NSSegmentedControl {
     private let size = CGSize(width: 148, height: 26)
     private let todayLabel: String = "Today"
     
+    // MARK: -
+    
     convenience init(origin: CGPoint) {
         self.init(frame: NSRect.zero)
         self.frame = NSRect(origin: origin, size: size)

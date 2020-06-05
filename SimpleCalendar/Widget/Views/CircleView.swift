@@ -17,6 +17,8 @@ final class CircleView: NSView {
     
     override var wantsUpdateLayer: Bool { true }
     
+    // MARK: -
+    
     override func updateLayer() {
         guard let layer = layer
             else { return }
