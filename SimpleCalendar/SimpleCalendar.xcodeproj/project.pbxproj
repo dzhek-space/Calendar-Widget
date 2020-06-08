@@ -568,6 +568,7 @@
 				CODE_SIGN_ENTITLEMENTS = SimpleCalendar/SimpleCalendar.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
+				CURRENT_PROJECT_VERSION = 2;
 				DEVELOPMENT_ASSET_PATHS = "\"SimpleCalendar/Preview Content\"";
 				ENABLE_PREVIEWS = YES;
 				INFOPLIST_FILE = SimpleCalendar/Info.plist;
@@ -590,6 +591,7 @@
 				CODE_SIGN_ENTITLEMENTS = SimpleCalendar/SimpleCalendar.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
+				CURRENT_PROJECT_VERSION = 2;
 				DEVELOPMENT_ASSET_PATHS = "\"SimpleCalendar/Preview Content\"";
 				ENABLE_PREVIEWS = YES;
 				INFOPLIST_FILE = SimpleCalendar/Info.plist;
