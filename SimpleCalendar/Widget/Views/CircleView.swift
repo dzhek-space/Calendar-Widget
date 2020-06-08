@@ -10,10 +10,10 @@ import Cocoa
 
 final class CircleView: NSView {
 
-    var backgroundColor = NSColor.shadowColor
-    var borderColor = NSColor(named: NSColor.Name(stringLiteral: "accent")) ?? .systemOrange
-    var borderWidth: CGFloat = 0.8
-    var cornerRadius:CGFloat = 11
+    private var backgroundColor = NSColor.shadowColor
+    private var borderColor = NSColor(named: NSColor.Name(stringLiteral: "accent")) ?? .systemOrange
+    private var borderWidth: CGFloat = 0.8
+    private var cornerRadius:CGFloat = 11
     
     override var wantsUpdateLayer: Bool { true }
     

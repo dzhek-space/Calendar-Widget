@@ -8,16 +8,12 @@
 
 import Foundation
 
-typealias WeekBlock = Array<SCDate>
-
 fileprivate func calculateInitialDate(with bias: Int) -> Date {
     let components = DateComponents(month: bias)
     return SCCalendar.current.date(byAdding: components, to: Date())!
 }
 
 struct DatesController {
-    
-    // MARK: - Properties
     
     private let initialDate: Date
     
@@ -54,19 +50,17 @@ struct DatesController {
         self.initialDate = initialDate
     }
 
-    private func setDatesBlock() -> [WeekBlock] {
+    private func setDatesBlock() -> [SCDate] {
         guard let firstDate = firstDateInBlock,
             let endDate = endDateInBlock
             else { return [] }
-        var calendarBlock = [WeekBlock]()
-        var weekBlock = WeekBlock()
+        var calendarBlock = [SCDate]()
+        calendarBlock.reserveCapacity(48) // 6*8
         let components = SCCalendar.current.dateComponents(
             [.hour, .minute, .second],
             from: initialDate
         )
         
-        /// creates an array [WeekBlock],
-        /// where WeekBlock = [#weekNumber, 5 x weekday, 2 x weekend]
         let handler: (Date?, Bool, inout Bool) -> Void = { (date, _, stop) in
             guard let date = date, date < endDate
                 else { stop = true; return }
@@ -80,29 +74,23 @@ struct DatesController {
                 dateType = .irrelevant
             }
             
-            switch weekBlock.isEmpty {
-                case true:
-                    let numberWeekOfYear = SCCalendar.current.component(.weekOfYear, from: date)
-                    let numberWeek = SCDate(value: numberWeekOfYear, type: .weekNumber, isToday: false)
-                    weekBlock.append(numberWeek)
-                    fallthrough
-                case false:
-                    let day = SCDate(value: value, type: dateType, isToday: isToday)
-                    weekBlock.append(day)
-                    if weekBlock.count == 8 {
-                        calendarBlock.append(weekBlock)
-                        weekBlock = []
-                    }
+            if calendarBlock.count % 8 == 0 {
+                let numberWeekOfYear = SCCalendar.current.component(.weekOfYear, from: date)
+                let numberWeek = SCDate(value: numberWeekOfYear, type: .weekNumber, isToday: false)
+                calendarBlock.append(numberWeek)
             }
+            
+            let day = SCDate(value: value, type: dateType, isToday: isToday)
+            calendarBlock.append(day)
         }
-
+        
         SCCalendar.current.enumerateDates(startingAfter: firstDate,
-                                matching: components,
-                                matchingPolicy: .nextTime,
-                                using: handler)
+                                          matching: components,
+                                          matchingPolicy: .nextTime,
+                                          using: handler)
         return calendarBlock
     }
-
+    
 }
 
 
@@ -111,14 +99,14 @@ struct DatesController {
 extension DatesController {
     
     static func presentedMonth(withBiasOfMonths bias: Int = 0) -> String {
-        let initialDate = calculateInitialDate(with: bias)
         let formatter = DateFormatter()
         formatter.timeStyle = .none
         formatter.dateFormat = "MMMM Y"
-        return formatter.string(from: initialDate)
+        let date = calculateInitialDate(with: bias)
+        return formatter.string(from: date)
     }
     
-    static func currentBlock(withBiasOfMonths bias: Int = 0) -> [WeekBlock] {
+    static func currentBlock(withBiasOfMonths bias: Int = 0) -> [SCDate] {
         let initialDate = calculateInitialDate(with: bias)
         let controller = DatesController(with: initialDate)
         return controller.setDatesBlock()

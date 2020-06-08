@@ -20,6 +20,8 @@ final class SCCalendar {
     
 }
 
+// MARK: - Interface
+
 extension SCCalendar {
     
     static var today: DateInterval {
