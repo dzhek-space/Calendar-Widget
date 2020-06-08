@@ -6,7 +6,7 @@
   <img src="https://img.shields.io/badge/Swift-5.2-orange.svg" alt="Swift">
   <img src="https://img.shields.io/badge/platform-macOS-lightgrey.svg" alt="Platform">
   <a href="https://github.com/dzhek-space/Calendar-Widget/releases">
-    <img src="https://img.shields.io/badge/release-1.0_(1)-%2300b4f0" alt="Version">
+    <img src="https://img.shields.io/badge/release-1.0_(2)-%2300b4f0" alt="Version">
   </a>
   <a href="https://raw.githubusercontent.com/dzhek-space/Calendar-Widget/master/LICENSE">
     <img src="https://img.shields.io/badge/license-MIT-green.svg" alt="LICENSE">
@@ -43,7 +43,6 @@ macOS 10.15+ (Catalina)
 ## To-Do
 
 - [ ] localization (+🇷🇺, +🇪🇸)
-- [ ] animation while scrolling
 - [ ] to highlight selected date
 - [ ] calculation of the interval between selected dates
 
