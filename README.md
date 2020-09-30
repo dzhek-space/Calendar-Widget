@@ -31,7 +31,7 @@ The "Simple Calendar" widget solves this problem 👍.
 
 ## Requirements
 
-macOS 10.15+ (Catalina)
+macOS 10.15 (Catalina)
 
 ## App Features
 
